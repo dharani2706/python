@@ -1,0 +1,12 @@
+def repeat(n):
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            for i in range(n):
+                func(*args, **kwargs)
+        return wrapper
+    return decorator
+def greet():
+    print("Hello! Welcome to Python.")
+greet()
+#output:
+Hello! Welcome to Python.
